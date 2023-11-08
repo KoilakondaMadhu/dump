@@ -1,0 +1,23 @@
+https://www.youtube.com/watch?v=EAC5hdmW1go&list=PLnqOgiihqmIrGajtdcJtKOVbel0gnuRe4&index=11&t=7855s
+
+tubelink
+
+19mins
+https://iconscout.com/unicons/free-line-icons
+
+services python
+
+
+ <li class="service__item python">   // <-python id the services item
+                <span><i class="uil uil-apps"></i></span>
+                <div>
+                    <h3>Python</h3>
+                    <p>6 projects</p>
+                </div>
+            </li>
+
+
+iconscout.com/unicons/explore/line
+
+
+
