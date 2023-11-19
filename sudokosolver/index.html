@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <style>
+        /* Add your CSS styles for the Sudoku board here */
+    </style>
+</head>
+<body>
+    <h1>Sudoku Solver</h1>
+    <button onclick="solveSudoku()">Solve Sudoku</button>
+    
+    <!-- Display your Sudoku board here -->
+    
+    <script>
+        function solveSudoku() {
+            // Fetch the current state of the Sudoku board
+            const board = getCurrentBoardState();
+
+            // Send the board to the server for solving
+            fetch('/solve', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(board),
+            })
+            .then(response => response.json())
+            .then(solvedBoard => {
+                // Update the UI with the solved Sudoku board
+                updateBoardUI(solvedBoard);
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        function getCurrentBoardState() {
+            // Implement this function to extract the current state of the Sudoku board from the UI
+            // Return the board as a 2D array of characters
+        }
+
+        function updateBoardUI(board) {
+            // Implement this function to update the UI with the solved Sudoku board
+        }
+    </script>
+</body>
+</html>
